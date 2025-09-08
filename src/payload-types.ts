@@ -84,8 +84,12 @@ export interface Config {
   db: {
     defaultIDType: string;
   };
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    home: Home;
+  };
+  globalsSelect: {
+    home: HomeSelect<false> | HomeSelect<true>;
+  };
   locale: null;
   user: User & {
     collection: 'users';
@@ -284,6 +288,32 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "home".
+ */
+export interface Home {
+  id: string;
+  Name: string;
+  'About Me': string;
+  'Profile Picture': string | Media;
+  'Contact Details': string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "home_select".
+ */
+export interface HomeSelect<T extends boolean = true> {
+  Name?: T;
+  'About Me'?: T;
+  'Profile Picture'?: T;
+  'Contact Details'?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
