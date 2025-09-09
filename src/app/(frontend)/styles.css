@@ -93,9 +93,7 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  padding: 45px;
+  align-items: left;
   max-width: 1024px;
   margin: 0 auto;
   overflow: hidden;

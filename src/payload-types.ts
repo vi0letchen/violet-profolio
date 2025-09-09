@@ -298,7 +298,8 @@ export interface Home {
   Name: string;
   'About Me': string;
   'Profile Picture': string | Media;
-  'Contact Details': string;
+  'Email Address': string;
+  'Phone Number': string;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -310,7 +311,8 @@ export interface HomeSelect<T extends boolean = true> {
   Name?: T;
   'About Me'?: T;
   'Profile Picture'?: T;
-  'Contact Details'?: T;
+  'Email Address'?: T;
+  'Phone Number'?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

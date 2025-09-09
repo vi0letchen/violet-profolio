@@ -1,4 +1,4 @@
-import {getPayload} from 'payload'
+import { getPayload } from 'payload'
 import config from '@/payload.config'
 
-export const payloadInstance = await getPayload({config})
+export const payloadInstance = await getPayload({ config })
