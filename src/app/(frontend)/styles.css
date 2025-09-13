@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   --font-mono: 'Roboto Mono', monospace;
 }
@@ -10,7 +15,7 @@ html {
   font-size: 18px;
   line-height: 32px;
 
-  background: rgb(0, 0, 0);
+  background: rgb(243, 232, 247);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -20,13 +25,12 @@ body,
   height: 100%;
 }
 
-body {
+.page {
   font-family: system-ui;
   font-size: 18px;
   line-height: 32px;
 
-  margin: 0;
-  color: rgb(1000, 1000, 1000);
+  color: rgb(105, 51, 134);
 
   @media (max-width: 1024px) {
     font-size: 15px;
@@ -37,7 +41,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 h1 {
@@ -87,6 +90,13 @@ a {
 
 svg {
   vertical-align: middle;
+}
+
+.page {
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 1024px;
+  width: 100%;
+  padding: 2rem;
 }
 
 .home {
