@@ -1,11 +1,6 @@
-import { headers as getHeaders } from 'next/headers.js'
 import Image from 'next/image'
-import { getPayload } from 'payload'
 import React from 'react'
-import { fileURLToPath } from 'url'
 
-import config from '@/payload.config'
-import './styles.css'
 import ContentService from '@/data-layer/ContentService'
 import { Media } from '@/payload-types'
 
@@ -17,7 +12,7 @@ export default async function HomePage() {
     <div className='home'>
       <div className="page">
         <h1>{homeInfo?.Name}</h1>
-        <h2>About Me</h2>
+        <p>About Me</p>
         <div className="flex flex-row">
           <div>{homeInfo?.['About Me']}</div>
         </div>
